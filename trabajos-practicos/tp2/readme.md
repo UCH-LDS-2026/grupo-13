@@ -110,7 +110,8 @@ Todas las acciones relacionadas con la creación, edición y eliminación de eve
 
 # 4. Diagrama de Clases
 
-<img width="1109" height="1419" alt="image" src="https://github.com/user-attachments/assets/4b1be4f4-76b7-4cdd-b652-26391cadad41" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b086a5ca-6a4a-4fc1-88f3-89ec919c66d8" />
+
 
 
 # 5. Justificación del Stack Tecnológico
