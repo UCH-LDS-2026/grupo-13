@@ -37,50 +37,14 @@ El proyecto utiliza una estrategia simple basada en ramas de funcionalidad y Pul
 
 ## Requisitos Previos (SDK y Versiones)
 
-* PHP 8.x
+* VIsual Studio Code
 * XAMPP
 * Apache
-* MySQL / MariaDB
-* Git 2.x
-* Navegador Web (Google Chrome o Mozilla Firefox)
+* MySQL 
+* html
+* php
+* css
 
----
-
-## Captura / Descripción de Instalación Exitosa
-
-El sistema fue configurado y ejecutado correctamente en los equipos de todos los integrantes del grupo, validando el correcto funcionamiento del frontend, backend y conexión con la base de datos local mediante XAMPP.
-
----
-
-## Pasos de ejecución
-
-1. Clonar el repositorio:
-
-```bash
-git clone https://github.com/UCH-LDS-2026/grupo-1
-```
-
-2. Copiar la carpeta del proyecto dentro de:
-
-```bash
-C:\xampp\htdocs\
-```
-
-3. Iniciar Apache y MySQL desde XAMPP.
-
-4. Crear la base de datos desde phpMyAdmin:
-
-```sql
-CREATE DATABASE eventtick;
-```
-
-5. Configurar las tablas necesarias para el proyecto.
-
-6. Ejecutar el sistema desde el navegador:
-
-```bash
-http://localhost/eventtick
-```
 
 ---
 
