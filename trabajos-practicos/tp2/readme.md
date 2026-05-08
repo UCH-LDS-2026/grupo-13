@@ -28,7 +28,7 @@ No se permiten cambios directos; todas las modificaciones deben ingresar mediant
 El proyecto utiliza una estrategia simple basada en ramas de funcionalidad y Pull Requests.
 
 - `main`: rama principal protegida. Contiene el código estable del proyecto.
-- `feature/nombre-funcionalidad`: rama creada para desarrollar una funcionalidad específica.
+- `feature/nombre-funcionalidad`: rama creada para desarrollar de manera personal el proyecto.
 
 
 
