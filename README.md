@@ -31,29 +31,28 @@ Frontend:
 -Interfaz de usuario (cliente + organizador)
 
 Backend:
--Login / registro
--CRUD productos
--Gestión de pedidos
--Roles (cliente / organizador / admin)
+- Login / registro
+- CRUD de eventos
+- Gestión de compras de entradas
+- Roles: comprador / organizador / administrador
 
 Base de datos:
--Usuarios
--eventos
--entradas
--Detalles de compra
--uso de triggers
+- usuarios
+- eventos
+- entradas
+- compras
+- detalle_compra
+- triggers para control de stock
+  
+## Cómo funciona el proyecto
 
-## Cómo ejecutar el proyecto
-
-Instrucciones
-
-1-Usuario inicia sesión
-2-Ve productos disponibles
-3-Agrega al carrito
-4-Confirma pedido
-5-PHP guarda pedido
-6-Verifica stock
-7-Calcula tiempo estimado
-8-Se actualiza estado del pedido
-
+1. El usuario se registra o inicia sesión.
+2. Visualiza los eventos disponibles.
+3. Selecciona un evento.
+4. Elige la cantidad de entradas.
+5. Confirma la compra.
+6. El sistema verifica la disponibilidad de entradas.
+7. Se descuenta automáticamente el stock.
+8. Se genera un comprobante con ID único de entrada.
+9. El organizador puede ver sus eventos y estadísticas de ventas.
 
