@@ -99,111 +99,51 @@ http://localhost/eventtick
 
 ---
 
-# 3. Diagramas de Casos de Uso
+# 3. Diagrama de Casos de Uso
 
 ## Actores Identificados
 
-### Usuario / Comprador
+1. **Usuario / Comprador:** Persona que utiliza la plataforma para visualizar eventos disponibles y comprar entradas.
 
-Persona que utiliza la plataforma para visualizar eventos y comprar entradas.
+2. **Organizador:** Usuario encargado de crear, editar, eliminar y administrar sus propios eventos.
 
-### Organizador
-
-Usuario encargado de crear y administrar eventos.
-
-### Administrador
-
-Usuario con permisos de control general del sistema.
+3. **Administrador:** Usuario con permisos generales para supervisar el sistema, gestionar usuarios y controlar eventos publicados.
 
 ---
 
 ## Casos de Uso Principales
 
-### Registrarse / Iniciar Sesión
+1. **Registrarse / Iniciar Sesión:**  
+   El usuario crea una cuenta o accede al sistema con sus credenciales.
 
-El usuario crea una cuenta y accede al sistema.
+2. **Visualizar Eventos:**  
+   El usuario consulta los eventos disponibles publicados en la plataforma.
 
-### Visualizar Eventos
+3. **Comprar Entrada:**  
+   El usuario selecciona un evento, elige la cantidad de entradas y confirma la compra.  
+   `<<include>> Verificar Disponibilidad de Entradas`  
+   `<<include>> Generar Comprobante`
 
-El usuario puede consultar eventos disponibles publicados por organizadores.
+4. **Crear Evento:**  
+   El organizador registra un nuevo evento indicando nombre, fecha, ubicación, cantidad de entradas, precio y descripción.  
+   `<<include>> Validar Datos del Evento`
 
-### Comprar Entrada
+5. **Gestionar Eventos:**  
+   El organizador administra los eventos creados.  
+   `<<extend>> Editar Evento`  
+   `<<extend>> Eliminar Evento`
 
-El usuario selecciona un evento y adquiere entradas disponibles.
-(<<include>> Verificar Stock)
-(<<include>> Generar Comprobante)
+6. **Ver Estadísticas de Ventas:**  
+   El organizador consulta la cantidad de entradas vendidas, ingresos generados y rendimiento de sus eventos.  
+   `<<include>> Generar Reporte de Ventas`
 
-### Crear Evento
+7. **Gestionar Usuarios:**  
+   El administrador puede controlar los usuarios registrados en el sistema.
 
-El organizador registra un nuevo evento en el sistema.
-(<<include>> Validar Datos)
+8. **Gestionar Eventos del Sistema:**  
+   El administrador puede supervisar, modificar o eliminar eventos publicados en la plataforma.
 
-### Gestionar Eventos
-
-El organizador puede editar o eliminar eventos existentes.
-(<<extend>> Crear Evento)
-
-### Ver Estadísticas
-
-El organizador consulta ventas, ingresos y cantidad de entradas vendidas.
-
----
-
-# 4. Diagrama de Clases
-
-A continuación se describen las principales clases del dominio del sistema:
-
-## Usuario
-
-* id : int
-* nombre : string
-* email : string
-* password : string
-* rol : string
-
-## Evento
-
-* id : int
-* nombre : string
-* descripcion : string
-* fecha : date
-* ubicacion : string
-* entradasDisponibles : int
-* precioEntrada : decimal
-
-## Compra
-
-* id : int
-* usuarioId : int
-* fechaCompra : datetime
-* total : decimal
-
-## Entrada
-
-* id : int
-* eventoId : int
-* codigoEntrada : string
-* estado : string
-
-## Comprobante
-
-* id : int
-* compraId : int
-* fechaEmision : datetime
-* codigoQR : string
-
----
-
-## Relaciones y Multiplicidades
-
-* Un Usuario puede realizar muchas Compras.
-* Una Compra pertenece a un Usuario.
-* Un Evento puede tener muchas Entradas.
-* Una Entrada pertenece a un Evento.
-* Una Compra puede generar un Comprobante.
-* Un Organizador puede crear múltiples Eventos.
-
----
+# 4. 
 
 # 5. Justificación del Stack Tecnológico
 
