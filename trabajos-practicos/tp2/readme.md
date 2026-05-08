@@ -143,6 +143,8 @@ http://localhost/eventtick
 8. **Gestionar Eventos del Sistema:**  
    El administrador puede supervisar, modificar o eliminar eventos publicados en la plataforma.
 
+
+
 # 4. 
 
 # 5. Justificación del Stack Tecnológico
