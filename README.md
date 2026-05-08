@@ -101,6 +101,22 @@ La plataforma busca solucionar problemas frecuentes en la organización y venta 
 
 ---
 
+## Setup del Proyecto
+
+### Requisitos previos
+
+- XAMPP
+- PHP 8.x
+- MySQL / MariaDB
+- Git
+- Navegador web
+
+### Instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
 # Objetivo del Proyecto
 
 Desarrollar una solución web funcional, intuitiva y segura para la administración de eventos y venta de entradas en tiempo real.
