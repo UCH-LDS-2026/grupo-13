@@ -6,11 +6,11 @@ Laboratorio de Desarrollo de Software
 
 ### Alumno/Grupo:
 
-Balderrama Gustavo, Lopez Juan Ignacio, Fenoy Nicolas - Grupo 1
+Balderrama Gustavo, Lopez Juan Ignacio, Fenoy Nicolas
 
 ### Link al Repositorio de GitHub:
 
-https://github.com/UCH-LDS-2026/grupo-1
+https://github.com/UCH-LDS-2026/grupo-13
 
 ---
 
