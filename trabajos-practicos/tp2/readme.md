@@ -104,7 +104,8 @@ El administrador configura parámetros generales y funcionamiento del sistema.
 
 Todas las acciones relacionadas con la creación, edición y eliminación de eventos son realizadas únicamente por el administrador del sistema.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a321a2e7-d1a9-4909-99f5-fd1333845c84" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a76b407c-5ba4-46e2-b7b6-29002cd4a441" />
+
 
 
 # 4. Diagrama de Clases
