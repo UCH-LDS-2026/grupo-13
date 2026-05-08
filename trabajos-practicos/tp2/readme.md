@@ -23,10 +23,26 @@ El proyecto utiliza una estrategia basada en GitFlow simplificado:
 Rama principal protegida. Contiene únicamente versiones estables y funcionales del sistema.
 No se permiten cambios directos; todas las modificaciones deben ingresar mediante Pull Request revisados previamente.
 
-## develop
+## Flujo de Trabajo con Ramas
 
-Rama de integración y desarrollo.
-Aquí se unen y prueban las nuevas funcionalidades antes de pasar a producción.
+El proyecto utiliza una estrategia simple basada en ramas de funcionalidad y Pull Requests.
+
+- `main`: rama principal protegida. Contiene el código estable del proyecto.
+- `feature/nombre-funcionalidad`: rama creada para desarrollar una funcionalidad específica.
+
+Ejemplos:
+
+- `feature/login`
+- `feature/crear-evento`
+- `feature/compra-entradas`
+- `feature/comprobante`
+
+## Proceso de trabajo
+
+1. Crear una rama de trabajo:
+
+```bash
+git checkout -b feature/nombre-funcionalidad
 
 ## feature/*
 
