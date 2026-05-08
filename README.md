@@ -120,3 +120,26 @@ git clone URL_DEL_REPOSITORIO
 # Objetivo del Proyecto
 
 Desarrollar una solución web funcional, intuitiva y segura para la administración de eventos y venta de entradas en tiempo real.
+
+
+# Estrategia de Ramas
+
+El proyecto utilizará una estrategia basada en ramas para organizar el desarrollo y evitar conflictos entre integrantes.
+
+## Ramas principales
+
+- `main`
+  - Contiene la versión estable del proyecto.
+  - Solo se suben funcionalidades verificadas y funcionando.
+
+- `develop`
+  - Rama utilizada para integrar y probar cambios antes de pasarlos a `main`.
+
+## Ramas de funcionalidades
+
+Cada integrante trabajará en ramas independientes para sus tareas.
+
+Formato:
+
+```bash
+feature/nombre-funcionalidad
