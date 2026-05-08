@@ -32,32 +32,6 @@ El proyecto utiliza una estrategia simple basada en ramas de funcionalidad y Pul
 
 
 
-## Proceso de trabajo
-
-1. Crear una rama de trabajo:
-
-```bash
-git checkout -b feature/nombre-funcionalidad
-
-## feature/*
-
-Ramas creadas desde develop para trabajar funcionalidades específicas del sistema.
-
-Ejemplos:
-
-* feature/login
-* feature/crud-eventos
-* feature/compras
-* feature/comprobantes
-* feature/dashboard-organizador
-
-Una vez terminada la funcionalidad, la rama se fusiona nuevamente con develop mediante Pull Request.
-
-## hotfix/*
-
-Ramas destinadas a solucionar errores críticos detectados en producción o en la rama principal.
-
----
 
 # 2. Entorno Configurado e Instalación
 
