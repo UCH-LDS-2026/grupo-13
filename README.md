@@ -1,58 +1,106 @@
-#### Universidad Champagnat - Laboratorio de Desarrollo de Software - 2026
+# Universidad Champagnat - Laboratorio de Desarrollo de Software 2026
 
-# Proyecto Final
-## Grupo N° 1
+# Proyecto Final - Grupo N°1
 
-## Integrantes:
+## Integrantes
 - Gustavo Balderrama
 - Juan Ignacio Lopez
 - Nicolas Fenoy
 
-## Problema que resuelve
+---
 
-El proyecto se ocupa de la necesidad de una plataforma eficaz para administrar eventos y vender boletos en tiempo real. Aspira a resolver problemas habituales, como por ejemplo los datos que sean necesarios y esten incompletos, el exceso en la venta de entradas y de llevar el control de la disponibilidad de entradas.
+# Descripción del Proyecto
 
-## Usuarios
+EventTick es una plataforma web orientada a la gestión de eventos y venta de entradas online.
 
--Organizadores
--Usuarios/Compradores
--Administradores
-## Funcionalidades principales
+El sistema permite a organizadores crear y administrar eventos, mientras que los usuarios pueden visualizar eventos disponibles, comprar entradas y recibir un comprobante digital con identificación única.
 
--Gestión de Eventos (CRUD): Creación, lectura, actualización y eliminación de eventos por parte de organizadores.
--Control de Stock Automatizado: Uso de triggers en la base de datos para descontar entradas automáticamente tras una compra.
--Generación de Comprobantes: Creación de un código único (QR o ID) por cada entrada vendida.
--Sistema de Roles y Autenticación: Login y registro con diferentes niveles de acceso (usuario, organizador, admin)
+Además, el sistema incorpora control automático de stock de entradas mediante triggers en la base de datos y un sistema de autenticación con distintos niveles de acceso.
 
-## Stack tecnológico
+---
 
-Frontend:
--HTML + CSS
--Interfaz de usuario (cliente + organizador)
+# Problemática que resuelve
 
-Backend:
-- Login / registro
-- CRUD de eventos
-- Gestión de compras de entradas
-- Roles: comprador / organizador / administrador
+La plataforma busca solucionar problemas frecuentes en la organización y venta de entradas para eventos, tales como:
 
-Base de datos:
+- Sobreventa de entradas.
+- Falta de control del stock disponible.
+- Gestión manual de eventos.
+- Información incompleta en las compras.
+- Dificultad para administrar ventas y ganancias.
+
+---
+
+# Tipos de Usuarios
+
+## Administrador
+- Gestión general del sistema.
+- Supervisión de eventos y usuarios.
+
+## Organizador
+- Crear, editar y eliminar eventos.
+- Consultar estadísticas de ventas.
+- Visualizar ingresos generados.
+
+## Usuario / Comprador
+- Registrarse e iniciar sesión.
+- Visualizar eventos disponibles.
+- Comprar entradas.
+- Descargar comprobantes de compra.
+
+---
+
+# Funcionalidades Principales
+
+- CRUD de eventos.
+- Sistema de autenticación y roles.
+- Compra de entradas online.
+- Control automático de stock mediante triggers.
+- Generación de comprobantes digitales.
+- Panel de estadísticas para organizadores.
+- Gestión de disponibilidad de entradas en tiempo real.
+
+---
+
+# Tecnologías Utilizadas
+
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+- PHP
+
+## Base de Datos
+- MySQL
+- Triggers SQL
+
+---
+
+# Estructura de Base de Datos
+
 - usuarios
 - eventos
 - entradas
 - compras
 - detalle_compra
-- triggers para control de stock
-  
-## Cómo funciona el proyecto
 
-1. El usuario se registra o inicia sesión.
+---
+
+# Flujo General del Sistema
+
+1. El usuario inicia sesión o se registra.
 2. Visualiza los eventos disponibles.
 3. Selecciona un evento.
 4. Elige la cantidad de entradas.
 5. Confirma la compra.
-6. El sistema verifica la disponibilidad de entradas.
-7. Se descuenta automáticamente el stock.
-8. Se genera un comprobante con ID único de entrada.
-9. El organizador puede ver sus eventos y estadísticas de ventas.
+6. El sistema verifica disponibilidad.
+7. Se actualiza automáticamente el stock.
+8. Se genera un comprobante digital con ID único.
 
+---
+
+# Objetivo del Proyecto
+
+Desarrollar una solución web funcional, intuitiva y segura para la administración de eventos y venta de entradas en tiempo real.
