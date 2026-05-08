@@ -52,47 +52,59 @@ El proyecto utiliza una estrategia simple basada en ramas de funcionalidad y Pul
 
 ## Actores Identificados
 
-1. **Usuario / Comprador:** Persona que utiliza la plataforma para visualizar eventos disponibles y comprar entradas.
+1. **Usuario / Comprador:**  
+Persona que utiliza la plataforma para visualizar eventos y comprar entradas.
 
-2. **Organizador:** Usuario encargado de crear, editar, eliminar y administrar sus propios eventos.
+2. **Organizador:**  
+Usuario encargado de consultar reportes y estadísticas de ventas de los eventos organizados.
 
-3. **Administrador:** Usuario con permisos generales para supervisar el sistema, gestionar usuarios y controlar eventos publicados.
+3. **Administrador:**  
+Usuario con permisos generales de administración del sistema. Se encarga de gestionar usuarios, crear, editar y eliminar eventos.
 
 ---
 
 ## Casos de Uso Principales
 
 1. **Registrarse / Iniciar Sesión:**  
-   El usuario crea una cuenta o accede al sistema con sus credenciales.
+El usuario crea una cuenta o accede al sistema mediante sus credenciales.
 
 2. **Visualizar Eventos:**  
-   El usuario consulta los eventos disponibles publicados en la plataforma.
+El usuario consulta los eventos disponibles publicados en la plataforma.
 
 3. **Comprar Entrada:**  
-   El usuario selecciona un evento, elige la cantidad de entradas y confirma la compra.  
-   `<<include>> Verificar Disponibilidad de Entradas`  
-   `<<include>> Generar Comprobante`
+El usuario selecciona un evento, elige la cantidad de entradas y confirma la compra.  
+`<<include>> Verificar Disponibilidad de Entradas`  
+`<<include>> Generar Comprobante`
 
-4. **Crear Evento:**  
-   El organizador registra un nuevo evento indicando nombre, fecha, ubicación, cantidad de entradas, precio y descripción.  
-   `<<include>> Validar Datos del Evento`
+4. **Ver Reporte de Ventas:**  
+El organizador consulta estadísticas, ingresos y rendimiento de ventas de los eventos.  
+`<<include>> Generar Reporte de Ventas`
 
-5. **Gestionar Eventos:**  
-   El organizador administra los eventos creados.  
-   `<<extend>> Editar Evento`  
-   `<<extend>> Eliminar Evento`
+5. **Gestionar Usuarios:**  
+El administrador administra los usuarios registrados en el sistema.
 
-6. **Ver Estadísticas de Ventas:**  
-   El organizador consulta la cantidad de entradas vendidas, ingresos generados y rendimiento de sus eventos.  
-   `<<include>> Generar Reporte de Ventas`
+6. **Crear Evento:**  
+El administrador registra nuevos eventos dentro de la plataforma.
 
-7. **Gestionar Usuarios:**  
-   El administrador puede controlar los usuarios registrados en el sistema.
+7. **Editar Evento:**  
+El administrador modifica información de eventos existentes.
 
-8. **Gestionar Eventos del Sistema:**  
-   El administrador puede supervisar, modificar o eliminar eventos publicados en la plataforma.
+8. **Eliminar Evento:**  
+El administrador elimina eventos del sistema.
 
-<img width="1536" height="1024" alt="diagrama de uso" src="https://github.com/user-attachments/assets/086921b6-4ac3-4df6-9fdd-367fce169aec" />
+9. **Generar Reporte de Ventas:**  
+El sistema genera reportes con información estadística de ventas e ingresos.
+
+10. **Configurar Parámetros del Sistema:**  
+El administrador configura parámetros generales y funcionamiento del sistema.
+
+---
+
+## Observación
+
+Todas las acciones relacionadas con la creación, edición y eliminación de eventos son realizadas únicamente por el administrador del sistema.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a321a2e7-d1a9-4909-99f5-fd1333845c84" />
 
 
 # 4. Diagrama de Clases
