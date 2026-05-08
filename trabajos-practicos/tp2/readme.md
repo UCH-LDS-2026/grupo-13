@@ -146,7 +146,10 @@ http://localhost/eventtick
 <img width="1536" height="1024" alt="diagrama de uso" src="https://github.com/user-attachments/assets/086921b6-4ac3-4df6-9fdd-367fce169aec" />
 
 
-# 4. 
+# 4. Diagrama de Clases
+
+<img width="1109" height="1419" alt="image" src="https://github.com/user-attachments/assets/4b1be4f4-76b7-4cdd-b652-26391cadad41" />
+
 
 # 5. Justificación del Stack Tecnológico
 
