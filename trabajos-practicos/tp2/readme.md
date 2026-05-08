@@ -143,6 +143,7 @@ http://localhost/eventtick
 8. **Gestionar Eventos del Sistema:**  
    El administrador puede supervisar, modificar o eliminar eventos publicados en la plataforma.
 
+<img width="1536" height="1024" alt="diagrama de uso" src="https://github.com/user-attachments/assets/086921b6-4ac3-4df6-9fdd-367fce169aec" />
 
 
 # 4. 
