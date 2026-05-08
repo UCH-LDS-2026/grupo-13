@@ -30,12 +30,7 @@ El proyecto utiliza una estrategia simple basada en ramas de funcionalidad y Pul
 - `main`: rama principal protegida. Contiene el código estable del proyecto.
 - `feature/nombre-funcionalidad`: rama creada para desarrollar una funcionalidad específica.
 
-Ejemplos:
 
-- `feature/login`
-- `feature/crear-evento`
-- `feature/compra-entradas`
-- `feature/comprobante`
 
 ## Proceso de trabajo
 
