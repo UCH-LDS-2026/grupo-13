@@ -110,7 +110,7 @@ Todas las acciones relacionadas con la creación, edición y eliminación de eve
 
 # 4. Diagrama de Clases
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b086a5ca-6a4a-4fc1-88f3-89ec919c66d8" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/60239070-1286-4794-b2d7-3fe3e9b19077" />
 
 
 
