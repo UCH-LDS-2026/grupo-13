@@ -1,186 +1,143 @@
 # Universidad Champagnat - Laboratorio de Desarrollo de Software 2026
+## Proyecto Final - Grupo N°1
 
-# Proyecto Final - Grupo N°1
-
-## Integrantes
-- Gustavo Balderrama
-- Juan Ignacio Lopez
-- Nicolas Fenoy
-
----
-
-# Descripción del Proyecto
-
-EventTick es una plataforma web orientada a la gestión de eventos y venta de entradas online.
-
-El sistema permite a organizadores crear y administrar eventos, mientras que los usuarios pueden visualizar eventos disponibles, comprar entradas y recibir un comprobante digital con identificación única.
-
-Además, el sistema incorpora control automático de stock de entradas mediante triggers en la base de datos y un sistema de autenticación con distintos niveles de acceso.
+### Integrantes
+* Gustavo Balderrama
+* Juan Ignacio Lopez
+* Nicolas Fenoy
 
 ---
 
-# Problemática que resuelve
-
-La plataforma busca solucionar problemas frecuentes en la organización y venta de entradas para eventos, tales como:
-
-- Sobreventa de entradas.
-- Falta de control del stock disponible.
-- Gestión manual de eventos.
-- Información incompleta en las compras.
-- Dificultad para administrar ventas y ganancias.
+## Descripcion del Proyecto
+EventTick es una plataforma web orientada a la gestion de eventos y venta de entradas online. El sistema permite a los organizadores crear y administrar eventos, mientras que los usuarios compradores pueden visualizar los shows disponibles, adquirir pases en tiempo real y recibir un comprobante digital con identificacion unica.
 
 ---
 
-# Tipos de Usuarios
-
-## Administrador
-- Gestión general del sistema.
-- Supervisión de eventos y usuarios.
-
-## Organizador
-- Crear, editar y eliminar eventos.
-- Consultar estadísticas de ventas.
-- Visualizar ingresos generados.
-
-## Usuario / Comprador
-- Registrarse e iniciar sesión.
-- Visualizar eventos disponibles.
-- Comprar entradas.
-- Descargar comprobantes de compra.
+## Problematica que resuelve
+La plataforma busca solucionar problemas frecuentes en la organizacion y comercializacion de espectaculos, tales como:
+* Sobreventa de entradas (control de capacidad).
+* Falta de control del stock disponible en tiempo real.
+* Gestion manual de reservas y eventos.
+* Procesos de compra incompletos o inseguros.
+* Dificultad para centralizar el control de ventas y ganancias.
 
 ---
 
-# Funcionalidades Principales
+## Tipos de Usuarios y Accesos
 
-- CRUD de eventos.
-- Sistema de autenticación y roles.
-- Compra de entradas online.
-- Control automático de stock mediante triggers.
-- Generación de comprobantes digitales.
-- Panel de estadísticas para organizadores.
-- Gestión de disponibilidad de entradas en tiempo real.
+### Administrador
+* Gestion general y auditoria del sistema.
+* Supervision integral de eventos y cuentas de usuarios.
 
----
+### Organizador
+* ABM (Alta, Baja, Modificacion) de sus propios eventos.
+* Consulta de estadisticas de ventas e ingresos generados.
 
-# Tecnologías Utilizadas
-
-## Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-- PHP
-
-## Base de Datos
-- MySQL
-- Triggers SQL
+### Usuario / Comprador
+* Registro e inicio de sesion seguro.
+* Visualizacion de la cartelera de eventos disponibles.
+* Compra de entradas y obtencion de comprobantes digitales.
 
 ---
 
-# Estructura de Base de Datos
-
-- usuarios
-- eventos
-- entradas
-- compras
-- detalle_compra
-
----
-
-# Flujo General del Sistema
-
-1. El usuario inicia sesión o se registra.
-2. Visualiza los eventos disponibles.
-3. Selecciona un evento.
-4. Elige la cantidad de entradas.
-5. Confirma la compra.
-6. El sistema verifica disponibilidad.
-7. Se actualiza automáticamente el stock.
-8. Se genera un comprobante digital con ID único.
+## Funcionalidades Principales
+* CRUD completo de eventos.
+* Sistema de autenticacion y control de roles.
+* Procesamiento de compra de entradas online.
+* Control logico de disponibilidad y cupos en tiempo real.
+* Generacion de comprobantes y tokens de validacion.
 
 ---
 
-## Setup del Proyecto
+## Tecnologías Utilizadas
 
-### Requisitos previos
+### Frontend
+* HTML5
+* CSS3
+* JavaScript
 
-- XAMPP
-- PHP 8.x
-- MySQL / MariaDB
-- Git
-- Navegador web
+### Backend y Logica de Negocio
+* PHP 8.x (Procesamiento del servidor web)
+* Java Puro / SDK 11+ (Modulo de logica independiente para algoritmos unicos)
 
-INSTALACION
-
-# Proyecto EventTick - Sistema de Gestion de Eventos y Entradas
-
-Esta guia esta pensada para configurar el proyecto desde cero en el entorno local si todavia no tenes nada instalado en tu computadora.
+### Base de Datos
+* MySQL / MariaDB
 
 ---
 
-## Objetivo del Proyecto
-El objetivo es desarrollar una solucion web funcional, intuitiva y segura para la administracion de eventos y venta de entradas en tiempo real, evitando problemas criticos como la sobreventa de tickets.
+## Estructura de la Base de Datos
+El sistema persiste la informacion de manera relacional mediante las siguientes tablas core mapeadas en el script:
+* usuario: Registra datos de acceso, nombres y roles del sistema.
+* evento: Contiene la informacion logistica y las entradas disponibles por show.
+* compra: Entidad central que unifica las transacciones vinculando usuarios con eventos.
 
 ---
 
-## Requisitos Previos
-Antes de empezar a trabajar con el codigo, necesitas instalar las siguientes herramientas:
-1. Visual Studio Code (o el editor de codigo que prefieras).
-2. XAMPP (Para levantar el servidor local Apache y la base de datos MySQL).
-3. SDK de Java (Versioón 11 o superior para ejecutar la logica interna).
+## Flujo General del Sistema
+1. El usuario inicia sesion o se registra en la plataforma.
+2. Explora la cartelera con los eventos que tienen stock disponible.
+3. Selecciona un show y confirma la intencion de compra.
+4. El sistema valida los cupos del evento en el backend.
+5. Se efectua el cobro, se descuenta la entrada y se actualiza la tabla evento.
+6. Se genera un comprobante digital en pantalla asociando un identificador unico de transaccion.
 
 ---
 
-## Estrateregia de Carpetas en la PC
-Para que el servidor de XAMPP pueda procesar las paginas web, el proyecto tiene que estar guardado dentro de la carpeta htdocs. 
+## Guia de Instalacion y Setup Local
 
-La ruta exacta en el disco duro debe quedar de la siguiente manera:
+### Requisitos previos necesarios
+Antes de comenzar, asegurate de contar con las siguientes herramientas en tu entorno:
+1. XAMPP (Para levantar los servicios locales de Apache y MySQL).
+2. Visual Studio Code (O tu editor de codigo preferido).
+3. SDK de Java (Version 11 o superior para compilar el componente logico).
+4. Git instalado en el sistema.
+
+### Estrategia de Carpetas en la PC
+Para que el servidor Apache de XAMPP pueda compilar e interpretar las paginas web del sistema, el repositorio debe ubicarse dentro del directorio htdocs.
+
+La ruta fisica exacta en tu disco duro debe ser:
 C:\xampp\htdocs\gestion-tickets-app\
 
-Dentro de esa carpeta se ubican los archivos esenciales:
-* conexion.php -> Conecta el sitio web con la base de datos.
-* comprobante.php -> Muestra el ticket en pantalla (HTML/CSS) y guarda los datos de la operacion.
-* GeneradorComprobante.java -> El modulo de logica pura en Java.
+Dentro de ese directorio vas a encontrar los archivos clave de ejecucion:
+* conexion.php -> Archivo encargado de establecer el puente con MySQL.
+* comprobante.php -> Renderiza el ticket en pantalla (HTML/CSS) y procesa el guardado de datos.
+* GeneradorComprobante.java -> Modulo independiente que contiene la logica del token.
 
----
-
-## Pasos para Iniciar el Entorno Local
-
-1. Iniciar el Servidor: Abrir el panel de XAMPP y hacer clic en Start en los modulos de Apache y MySQL (ambos deben cambiar a color verde).
-2. Configurar la Base de Datos: Ingresar a http://localhost/phpmyadmin/, crear una base de datos nueva llamada gestion_eventos_db y ejecutar el script SQL para armar las tablas de usuario, evento y compra.
-3. Probar la Aplicacion: Abrir el navegador de internet e ingresar a la direccion local para ver el archivo funcionando:
+### Pasos para Iniciar el Entorno Local
+1. Iniciar Servidores: Abrir el panel de control de XAMPP y hacer clic en "Start" en los modulos de Apache y MySQL (ambos deben cambiar al estado verde).
+2. Importar Base de Datos: Ingresar desde el navegador web a http://localhost/phpmyadmin/, crear una base de datos con el nombre exacto de `gestion_eventos_db` y ejecutar el archivo de script SQL adjunto para estructurar las tablas.
+3. Levantar la App: Abrir una pestaña en el navegador web e ingresar a la URL local del proyecto:
    http://localhost/gestion-tickets-app/comprobante.php
 
 ---
 
-## Estrateregia de Ramas (Git)
+## Estrategia de Ramas (Gitflow Simplificado)
 
-Para trabajar organizados en equipo y evitar conflictos de codigo, usamos la siguiente estructura de ramas en el repositorio:
+Para mantener la prolijidad en el trabajo grupal y evitar colisiones de codigo, el repositorio se maneja bajo el siguiente esquema de ramas:
 
 ### Ramas principales
-* main: Contiene la version estable del proyecto. Solo se suben funcionalidades completamente verificadas y funcionando. No se programa directo sobre esta rama.
-* develop: Rama utilizada para integrar y probar los cambios de todos los integrantes antes de pasarlos a main.
+* main: Contiene la version oficial, estable de produccion. Solo se integra codigo testeado y funcionando. Nunca se suben cambios de forma directa a esta rama.
+* develop: Rama de integracion. Aqui convergen las tareas de todos los miembros para realizar pruebas integrales antes de pasar a la rama principal.
 
-### Ramas de funcionalidades
-Cada integrante trabaja en ramas independientes para sus tareas diarias, creadas siempre a partir de develop.
+### Ramas de funcionalidades (Features)
+Cada tarea o issue asignado se desarrolla en una rama independiente creada a partir de develop, usando la nomenclatura establecida:
 
 Formato de nombre:
 feature/nombre-funcionalidad
 
-Ejemplo: feature/generador-comprobantes
+Ejemplo practico: feature/generador-comprobantes
 
-### Comandos basicos para arrancar:
+### Comandos basicos de trabajo:
 
-* Clonar el repositorio:
+* Clonar el repositorio por primera vez:
   git clone URL_DEL_REPOSITORIO
 
-* Crear tu rama de trabajo:
+* Crear y cambiarse a una nueva rama de desarrollo:
   git checkout -b feature/nombre-funcionalidad
 
-* Guardar tus cambios locales:
+* Guardar los avances en el entorno local:
   git add .
-  git commit -m "Explicacion breve de lo que hiciste"
+  git commit -m "Mensaje corto describiendo el cambio realizado"
 
-* Subir tu rama a GitHub:
+* Subir la rama de trabajo hacia el repositorio remoto de GitHub:
   git push origin feature/nombre-funcionalidad
