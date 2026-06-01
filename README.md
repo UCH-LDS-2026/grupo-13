@@ -82,32 +82,33 @@ El sistema persiste la informacion de manera relacional mediante las siguientes 
 6. Se genera un comprobante digital en pantalla asociando un identificador unico de transaccion.
 
 ---
+## Guia de Instalacion desde Cero (Paso a Paso)
 
-## Guia de Instalacion y Setup Local
+Este instructivo está pensado para preparar el entorno de desarrollo si no tenés ninguna herramienta instalada en tu computadora.
 
-### Requisitos previos necesarios
-Antes de comenzar, asegurate de contar con las siguientes herramientas en tu entorno:
-1. XAMPP (Para levantar los servicios locales de Apache y MySQL).
-2. Visual Studio Code (O tu editor de codigo preferido).
-3. SDK de Java (Version 11 o superior para compilar el componente logico).
-4. Git instalado en el sistema.
+### Paso 1: Descargar e instalar los programas necesarios
+Primero tenés que bajarte e instalar estas cuatro herramientas en tu sistema (dejas todas las opciones que vienen por defecto durante la instalacion):
 
-### Estrategia de Carpetas en la PC
-Para que el servidor Apache de XAMPP pueda compilar e interpretar las paginas web del sistema, el repositorio debe ubicarse dentro del directorio htdocs.
+1. **XAMPP**: Es el programa que va a transformar tu computadora en un servidor local para que funcionen las páginas web y la base de datos.
+   * Descarga: Buscá "Descargar XAMPP" en Google (elegí la versión para Windows con PHP 8.x).
+2. **Visual Studio Code**: Es el editor de texto que usamos para abrir las carpetas y escribir el código.
+   * Descarga: Buscá "Descargar Visual Studio Code" e instalalo.
+3. **Git**: Es la herramienta que nos permite descargar el proyecto desde GitHub y trabajar en equipo sin pisarnos.
+   * Descarga: Buscá "Git for Windows" y bajá el instalador.
+4. **Java SDK (Versión 11 o superior)**: Es el motor que necesita la computadora para entender y ejecutar el archivo de lógica pura (.java).
+   * Descarga: Buscá "Descargar OpenJDK 11" o "Java SE 11" e instalalo.
 
-La ruta fisica exacta en tu disco duro debe ser:
-C:\xampp\htdocs\gestion-tickets-app\
+---
 
-Dentro de ese directorio vas a encontrar los archivos clave de ejecucion:
-* conexion.php -> Archivo encargado de establecer el puente con MySQL.
-* comprobante.php -> Renderiza el ticket en pantalla (HTML/CSS) y procesa el guardado de datos.
-* GeneradorComprobante.java -> Modulo independiente que contiene la logica del token.
+### Paso 2: Clonar y ubicar el proyecto en tu PC
+Para que las páginas web de PHP funcionen, el proyecto **SÍ O SÍ** tiene que estar guardado adentro de una carpeta especial que administra XAMPP llamada `htdocs`. No sirve si lo dejás en el Escritorio o en Descargas.
 
-### Pasos para Iniciar el Entorno Local
-1. Iniciar Servidores: Abrir el panel de control de XAMPP y hacer clic en "Start" en los modulos de Apache y MySQL (ambos deben cambiar al estado verde).
-2. Importar Base de Datos: Ingresar desde el navegador web a http://localhost/phpmyadmin/, crear una base de datos con el nombre exacto de `gestion_eventos_db` y ejecutar el archivo de script SQL adjunto para estructurar las tablas.
-3. Levantar la App: Abrir una pestaña en el navegador web e ingresar a la URL local del proyecto:
-   http://localhost/gestion-tickets-app/comprobante.php
+1. Abrí la carpeta general de tu computadora y navegá hasta esta ruta física:
+   `C:\xampp\htdocs\`
+2. Hacé clic derecho en un espacio blanco de esa carpeta y elegí **"Git Bash Here"** (se abrirá una consola de comandos negra).
+3. Copiá, pegá el siguiente comando y presioná Enter para traerte los archivos del repositorio:
+   ```bash
+   git clone URL_DEL_REPOSITORIO gestion-tickets-app
 
 ---
 
