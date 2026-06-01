@@ -1,145 +1,144 @@
 # Universidad Champagnat - Laboratorio de Desarrollo de Software 2026
+## Proyecto Final - Grupo N°1
 
-# Proyecto Final - Grupo N°1
-
-## Integrantes
-- Gustavo Balderrama
-- Juan Ignacio Lopez
-- Nicolas Fenoy
-
----
-
-# Descripción del Proyecto
-
-EventTick es una plataforma web orientada a la gestión de eventos y venta de entradas online.
-
-El sistema permite a organizadores crear y administrar eventos, mientras que los usuarios pueden visualizar eventos disponibles, comprar entradas y recibir un comprobante digital con identificación única.
-
-Además, el sistema incorpora control automático de stock de entradas mediante triggers en la base de datos y un sistema de autenticación con distintos niveles de acceso.
+### Integrantes
+* Gustavo Balderrama
+* Juan Ignacio Lopez
+* Nicolas Fenoy
 
 ---
 
-# Problemática que resuelve
-
-La plataforma busca solucionar problemas frecuentes en la organización y venta de entradas para eventos, tales como:
-
-- Sobreventa de entradas.
-- Falta de control del stock disponible.
-- Gestión manual de eventos.
-- Información incompleta en las compras.
-- Dificultad para administrar ventas y ganancias.
+## Descripcion del Proyecto
+EventTick es una plataforma web orientada a la gestion de eventos y venta de entradas online. El sistema permite a los organizadores crear y administrar eventos, mientras que los usuarios compradores pueden visualizar los shows disponibles, adquirir pases en tiempo real y recibir un comprobante digital con identificacion unica.
 
 ---
 
-# Tipos de Usuarios
-
-## Administrador
-- Gestión general del sistema.
-- Supervisión de eventos y usuarios.
-
-## Organizador
-- Crear, editar y eliminar eventos.
-- Consultar estadísticas de ventas.
-- Visualizar ingresos generados.
-
-## Usuario / Comprador
-- Registrarse e iniciar sesión.
-- Visualizar eventos disponibles.
-- Comprar entradas.
-- Descargar comprobantes de compra.
+## Problematica que resuelve
+La plataforma busca solucionar problemas frecuentes en la organizacion y comercializacion de espectaculos, tales como:
+* Sobreventa de entradas (control de capacidad).
+* Falta de control del stock disponible en tiempo real.
+* Gestion manual de reservas y eventos.
+* Procesos de compra incompletos o inseguros.
+* Dificultad para centralizar el control de ventas y ganancias.
 
 ---
 
-# Funcionalidades Principales
+## Tipos de Usuarios y Accesos
 
-- CRUD de eventos.
-- Sistema de autenticación y roles.
-- Compra de entradas online.
-- Control automático de stock mediante triggers.
-- Generación de comprobantes digitales.
-- Panel de estadísticas para organizadores.
-- Gestión de disponibilidad de entradas en tiempo real.
+### Administrador
+* Gestion general y auditoria del sistema.
+* Supervision integral de eventos y cuentas de usuarios.
 
----
+### Organizador
+* ABM (Alta, Baja, Modificacion) de sus propios eventos.
+* Consulta de estadisticas de ventas e ingresos generados.
 
-# Tecnologías Utilizadas
-
-## Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-- PHP
-
-## Base de Datos
-- MySQL
-- Triggers SQL
+### Usuario / Comprador
+* Registro e inicio de sesion seguro.
+* Visualizacion de la cartelera de eventos disponibles.
+* Compra de entradas y obtencion de comprobantes digitales.
 
 ---
 
-# Estructura de Base de Datos
-
-- usuarios
-- eventos
-- entradas
-- compras
-- detalle_compra
-
----
-
-# Flujo General del Sistema
-
-1. El usuario inicia sesión o se registra.
-2. Visualiza los eventos disponibles.
-3. Selecciona un evento.
-4. Elige la cantidad de entradas.
-5. Confirma la compra.
-6. El sistema verifica disponibilidad.
-7. Se actualiza automáticamente el stock.
-8. Se genera un comprobante digital con ID único.
+## Funcionalidades Principales
+* CRUD completo de eventos.
+* Sistema de autenticacion y control de roles.
+* Procesamiento de compra de entradas online.
+* Control logico de disponibilidad y cupos en tiempo real.
+* Generacion de comprobantes y tokens de validacion.
 
 ---
 
-## Setup del Proyecto
+## Tecnologías Utilizadas
 
-### Requisitos previos
+### Frontend
+* HTML5
+* CSS3
+* JavaScript
 
-- XAMPP
-- PHP 8.x
-- MySQL / MariaDB
-- Git
-- Navegador web
+### Backend y Logica de Negocio
+* PHP 8.x (Procesamiento del servidor web)
+* Java Puro / SDK 11+ (Modulo de logica independiente para algoritmos unicos)
 
-### Instalación
+### Base de Datos
+* MySQL / MariaDB
 
-1. Clonar el repositorio:
+---
 
-```bash
-git clone URL_DEL_REPOSITORIO
-# Objetivo del Proyecto
+## Estructura de la Base de Datos
+El sistema persiste la informacion de manera relacional mediante las siguientes tablas core mapeadas en el script:
+* usuario: Registra datos de acceso, nombres y roles del sistema.
+* evento: Contiene la informacion logistica y las entradas disponibles por show.
+* compra: Entidad central que unifica las transacciones vinculando usuarios con eventos.
 
-Desarrollar una solución web funcional, intuitiva y segura para la administración de eventos y venta de entradas en tiempo real.
+---
 
+## Flujo General del Sistema
+1. El usuario inicia sesion o se registra en la plataforma.
+2. Explora la cartelera con los eventos que tienen stock disponible.
+3. Selecciona un show y confirma la intencion de compra.
+4. El sistema valida los cupos del evento en el backend.
+5. Se efectua el cobro, se descuenta la entrada y se actualiza la tabla evento.
+6. Se genera un comprobante digital en pantalla asociando un identificador unico de transaccion.
 
-# Estrategia de Ramas
+---
+## Guia de Instalacion desde Cero (Paso a Paso)
 
-El proyecto utilizará una estrategia basada en ramas para organizar el desarrollo y evitar conflictos entre integrantes.
+Este instructivo está pensado para preparar el entorno de desarrollo si no tenés ninguna herramienta instalada en tu computadora.
 
-## Ramas principales
+### Paso 1: Descargar e instalar los programas necesarios
+Primero tenés que bajarte e instalar estas cuatro herramientas en tu sistema (dejas todas las opciones que vienen por defecto durante la instalacion):
 
-- `main`
-  - Contiene la versión estable del proyecto.
-  - Solo se suben funcionalidades verificadas y funcionando.
+1. **XAMPP**: Es el programa que va a transformar tu computadora en un servidor local para que funcionen las páginas web y la base de datos.
+   * Descarga: Buscá "Descargar XAMPP" en Google (elegí la versión para Windows con PHP 8.x).
+2. **Visual Studio Code**: Es el editor de texto que usamos para abrir las carpetas y escribir el código.
+   * Descarga: Buscá "Descargar Visual Studio Code" e instalalo.
+3. **Git**: Es la herramienta que nos permite descargar el proyecto desde GitHub y trabajar en equipo sin pisarnos.
+   * Descarga: Buscá "Git for Windows" y bajá el instalador.
+4. **Java SDK (Versión 11 o superior)**: Es el motor que necesita la computadora para entender y ejecutar el archivo de lógica pura (.java).
+   * Descarga: Buscá "Descargar OpenJDK 11" o "Java SE 11" e instalalo.
 
-- `develop`
-  - Rama utilizada para integrar y probar cambios antes de pasarlos a `main`.
+---
 
-## Ramas de funcionalidades
+### Paso 2: Clonar y ubicar el proyecto en tu PC
+Para que las páginas web de PHP funcionen, el proyecto **SÍ O SÍ** tiene que estar guardado adentro de una carpeta especial que administra XAMPP llamada `htdocs`. No sirve si lo dejás en el Escritorio o en Descargas.
 
-Cada integrante trabajará en ramas independientes para sus tareas.
+1. Abrí la carpeta general de tu computadora y navegá hasta esta ruta física:
+   `C:\xampp\htdocs\`
+2. Hacé clic derecho en un espacio blanco de esa carpeta y elegí **"Git Bash Here"** (se abrirá una consola de comandos negra).
+3. Copiá, pegá el siguiente comando y presioná Enter para traerte los archivos del repositorio:
+   ```bash
+   git clone URL_DEL_REPOSITORIO gestion-tickets-app
 
-Formato:
+---
 
-```bash
+## Estrategia de Ramas (Gitflow Simplificado)
+
+Para mantener la prolijidad en el trabajo grupal y evitar colisiones de codigo, el repositorio se maneja bajo el siguiente esquema de ramas:
+
+### Ramas principales
+* main: Contiene la version oficial, estable de produccion. Solo se integra codigo testeado y funcionando. Nunca se suben cambios de forma directa a esta rama.
+* develop: Rama de integracion. Aqui convergen las tareas de todos los miembros para realizar pruebas integrales antes de pasar a la rama principal.
+
+### Ramas de funcionalidades (Features)
+Cada tarea o issue asignado se desarrolla en una rama independiente creada a partir de develop, usando la nomenclatura establecida:
+
+Formato de nombre:
 feature/nombre-funcionalidad
+
+Ejemplo practico: feature/generador-comprobantes
+
+### Comandos basicos de trabajo:
+
+* Clonar el repositorio por primera vez:
+  git clone URL_DEL_REPOSITORIO
+
+* Crear y cambiarse a una nueva rama de desarrollo:
+  git checkout -b feature/nombre-funcionalidad
+
+* Guardar los avances en el entorno local:
+  git add .
+  git commit -m "Mensaje corto describiendo el cambio realizado"
+
+* Subir la rama de trabajo hacia el repositorio remoto de GitHub:
+  git push origin feature/nombre-funcionalidad
