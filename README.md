@@ -2,50 +2,50 @@
 ## Proyecto Final - Grupo N°1
 
 ### Integrantes
-* Gustavo Balderrama
-* Juan Ignacio Lopez
-* Nicolas Fenoy
+* [cite_start]Gustavo Balderrama [cite: 1]
+* [cite_start]Juan Ignacio Lopez [cite: 1]
+* [cite_start]Nicolas Fenoy [cite: 1]
 
 ---
 
 ## Descripcion del Proyecto
-EventTick es una plataforma web orientada a la gestion de eventos y venta de entradas online. El sistema permite a los organizadores crear y administrar eventos, mientras que los usuarios compradores pueden visualizar los shows disponibles, adquirir pases en tiempo real y recibir un comprobante digital con identificacion unica.
+[cite_start]EventTick es una plataforma web orientada a la gestion de eventos y venta de entradas online. [cite: 1] [cite_start]El sistema permite a los organizadores crear y administrar eventos, mientras que los usuarios compradores pueden visualizar los shows disponibles, adquirir pases en tiempo real y recibir un comprobante digital con identificacion unica. [cite: 2]
 
 ---
 
 ## Problematica que resuelve
-La plataforma busca solucionar problemas frecuentes en la organizacion y comercializacion de espectaculos, tales como:
-* Sobreventa de entradas (control de capacidad).
-* Falta de control del stock disponible en tiempo real.
-* Gestion manual de reservas y eventos.
-* Procesos de compra incompletos o inseguros.
-* Dificultad para centralizar el control de ventas y ganancias.
+[cite_start]La plataforma busca solucionar problemas frecuentes en la organizacion y comercializacion de espectaculos, tales como: [cite: 3]
+* [cite_start]Sobreventa de entradas (control de capacidad). [cite: 3]
+* [cite_start]Falta de control del stock disponible en tiempo real. [cite: 4]
+* [cite_start]Gestion manual de reservas y eventos. [cite: 4]
+* [cite_start]Procesos de compra incompletos o inseguros. [cite: 5]
+* [cite_start]Dificultad para centralizar el control de ventas y ganancias. [cite: 5]
 
 ---
 
-## Tipos de Usuarios y Accesos
+## [cite_start]Tipos de Usuarios y Accesos [cite: 6]
 
-### Administrador
-* Gestion general y auditoria del sistema.
-* Supervision integral de eventos y cuentas de usuarios.
+### [cite_start]Administrador [cite: 6]
+* [cite_start]Gestion general y auditoria del sistema. [cite: 6]
+* [cite_start]Supervision integral de eventos y cuentas de usuarios. [cite: 7]
 
-### Organizador
-* ABM (Alta, Baja, Modificacion) de sus propios eventos.
-* Consulta de estadisticas de ventas e ingresos generados.
+### [cite_start]Organizador [cite: 7]
+* [cite_start]ABM (Alta, Baja, Modificacion) de sus propios eventos. [cite: 7]
+* [cite_start]Consulta de estadisticas de ventas e ingresos generados. [cite: 8]
 
-### Usuario / Comprador
-* Registro e inicio de sesion seguro.
-* Visualizacion de la cartelera de eventos disponibles.
-* Compra de entradas y obtencion de comprobantes digitales.
+### [cite_start]Usuario / Comprador [cite: 8]
+* [cite_start]Registro e inicio de sesion seguro. [cite: 8]
+* [cite_start]Visualizacion de la cartelera de eventos disponibles. [cite: 9]
+* [cite_start]Compra de entradas y obtencion de comprobantes digitales. [cite: 9]
 
 ---
 
-## Funcionalidades Principales
-* CRUD completo de eventos.
-* Sistema de autenticacion y control de roles.
-* Procesamiento de compra de entradas online.
-* Control logico de disponibilidad y cupos en tiempo real.
-* Generacion de comprobantes y tokens de validacion.
+## [cite_start]Funcionalidades Principales [cite: 10]
+* [cite_start]CRUD completo de eventos. [cite: 10]
+* [cite_start]Sistema de autenticacion y control de roles. [cite: 10]
+* [cite_start]Procesamiento de compra de entradas online. [cite: 11]
+* [cite_start]Control logico de disponibilidad y cupos en tiempo real. [cite: 11]
+* [cite_start]Generacion de comprobantes y tokens de validacion. [cite: 12]
 
 ---
 
@@ -67,78 +67,45 @@ La plataforma busca solucionar problemas frecuentes en la organizacion y comerci
 
 ## Estructura de la Base de Datos
 El sistema persiste la informacion de manera relacional mediante las siguientes tablas core mapeadas en el script:
-* usuario: Registra datos de acceso, nombres y roles del sistema.
-* evento: Contiene la informacion logistica y las entradas disponibles por show.
-* compra: Entidad central que unifica las transacciones vinculando usuarios con eventos.
+* [cite_start]usuario: Registra datos de acceso, nombres y roles del sistema. [cite: 12]
+* [cite_start]evento: Contiene la informacion logistica y las entradas disponibles por show. [cite: 13]
+* [cite_start]compra: Entidad central que unifica las transacciones vinculando usuarios con eventos. [cite: 14]
 
 ---
 
 ## Flujo General del Sistema
-1. El usuario inicia sesion o se registra en la plataforma.
-2. Explora la cartelera con los eventos que tienen stock disponible.
-3. Selecciona un show y confirma la intencion de compra.
-4. El sistema valida los cupos del evento en el backend.
-5. Se efectua el cobro, se descuenta la entrada y se actualiza la tabla evento.
-6. Se genera un comprobante digital en pantalla asociando un identificador unico de transaccion.
-
----
-## Guia de Instalacion desde Cero (Paso a Paso)
-
-Este instructivo está pensado para preparar el entorno de desarrollo si no tenés ninguna herramienta instalada en tu computadora.
-
-### Paso 1: Descargar e instalar los programas necesarios
-Primero tenés que bajarte e instalar estas cuatro herramientas en tu sistema (dejas todas las opciones que vienen por defecto durante la instalacion):
-
-1. **XAMPP**: Es el programa que va a transformar tu computadora en un servidor local para que funcionen las páginas web y la base de datos.
-   * Descarga: Buscá "Descargar XAMPP" en Google (elegí la versión para Windows con PHP 8.x).
-2. **Visual Studio Code**: Es el editor de texto que usamos para abrir las carpetas y escribir el código.
-   * Descarga: Buscá "Descargar Visual Studio Code" e instalalo.
-3. **Git**: Es la herramienta que nos permite descargar el proyecto desde GitHub y trabajar en equipo sin pisarnos.
-   * Descarga: Buscá "Git for Windows" y bajá el instalador.
-4. **Java SDK (Versión 11 o superior)**: Es el motor que necesita la computadora para entender y ejecutar el archivo de lógica pura (.java).
-   * Descarga: Buscá "Descargar OpenJDK 11" o "Java SE 11" e instalalo.
+1. [cite_start]El usuario inicia sesion o se registra en la plataforma. [cite: 15]
+2. [cite_start]Explora la cartelera con los eventos que tienen stock disponible. [cite: 16]
+3. [cite_start]Selecciona un show y confirma la intencion de compra. [cite: 17]
+4. [cite_start]El sistema valida los cupos del evento en el backend. [cite: 18]
+5. [cite_start]Se efectua el cobro, se descuenta la entrada y se actualiza la tabla evento. [cite: 19]
+6. [cite_start]Se genera un comprobante digital en pantalla asociando un identificador unico de transaccion. [cite: 20]
 
 ---
 
-### Paso 2: Clonar y ubicar el proyecto en tu PC
-Para que las páginas web de PHP funcionen, el proyecto **SÍ O SÍ** tiene que estar guardado adentro de una carpeta especial que administra XAMPP llamada `htdocs`. No sirve si lo dejás en el Escritorio o en Descargas.
+## [cite_start]Guia de Instalacion desde Cero (Paso a Paso) [cite: 21]
 
-1. Abrí la carpeta general de tu computadora y navegá hasta esta ruta física:
-   `C:\xampp\htdocs\`
-2. Hacé clic derecho en un espacio blanco de esa carpeta y elegí **"Git Bash Here"** (se abrirá una consola de comandos negra).
-3. Copiá, pegá el siguiente comando y presioná Enter para traerte los archivos del repositorio:
+[cite_start]Este instructivo está pensado para preparar el entorno de desarrollo si no tenés ninguna herramienta instalada en tu computadora. [cite: 21]
+
+### [cite_start]Paso 1: Descargar e instalar los programas necesarios [cite: 22]
+[cite_start]Primero tenés que bajarte e instalar estas cuatro herramientas en tu sistema (dejas todas las opciones que vienen por defecto durante la instalacion): [cite: 22]
+
+1. [cite_start]**XAMPP**: Es el programa que va a transformar tu computadora en un servidor local para que funcionen las páginas web y la base de datos. [cite: 22]
+   * [cite_start]Descarga: Buscá "Descargar XAMPP" en Google (elegí la versión para Windows con PHP 8.x). [cite: 23]
+2. [cite_start]**Visual Studio Code**: Es el editor de texto que usamos para abrir las carpetas y escribir el código. [cite: 24]
+   * [cite_start]Descarga: Buscá "Descargar Visual Studio Code" e instalalo. [cite: 25]
+3. [cite_start]**Git**: Es la herramienta que nos permite descargar el proyecto desde GitHub y trabajar en equipo sin pisarnos. [cite: 25]
+   * [cite_start]Descarga: Buscá "Git for Windows" y bajá el instalador. [cite: 26]
+4. [cite_start]**Java SDK (Versión 11 o superior)**: Es el motor que necesita la computadora para entender y ejecutar el archivo de lógica pura (.java). [cite: 27]
+   * [cite_start]Descarga: Buscá "Descargar OpenJDK 11" o "Java SE 11" e instalalo. [cite: 28]
+
+---
+
+### [cite_start]Paso 2: Clonar y ubicar el proyecto en tu PC [cite: 29]
+[cite_start]Para que las páginas web de PHP funcionen, el proyecto **SÍ O SÍ** tiene que estar guardado adentro de una carpeta especial que administra XAMPP llamada `htdocs`. [cite: 29] [cite_start]No sirve si lo dejás en el Escritorio o en Descargas. [cite: 30]
+
+1. [cite_start]Abrí la carpeta general de tu computadora y navegá hasta esta ruta física: `C:\xampp\htdocs\` [cite: 31]
+2. [cite_start]Hacé clic derecho en un espacio blanco de esa carpeta y elegí **"Git Bash Here"** (se abrirá una consola de comandos negra). [cite: 31]
+3. [cite_start]Copiá, pegá el siguiente comando y presioná Enter para traerte los archivos del repositorio: 
    ```bash
    git clone URL_DEL_REPOSITORIO gestion-tickets-app
-
----
-
-## Estrategia de Ramas (Gitflow Simplificado)
-
-Para mantener la prolijidad en el trabajo grupal y evitar colisiones de codigo, el repositorio se maneja bajo el siguiente esquema de ramas:
-
-### Ramas principales
-* main: Contiene la version oficial, estable de produccion. Solo se integra codigo testeado y funcionando. Nunca se suben cambios de forma directa a esta rama.
-* develop: Rama de integracion. Aqui convergen las tareas de todos los miembros para realizar pruebas integrales antes de pasar a la rama principal.
-
-### Ramas de funcionalidades (Features)
-Cada tarea o issue asignado se desarrolla en una rama independiente creada a partir de develop, usando la nomenclatura establecida:
-
-Formato de nombre:
-feature/nombre-funcionalidad
-
-Ejemplo practico: feature/generador-comprobantes
-
-### Comandos basicos de trabajo:
-
-* Clonar el repositorio por primera vez:
-  git clone URL_DEL_REPOSITORIO
-
-* Crear y cambiarse a una nueva rama de desarrollo:
-  git checkout -b feature/nombre-funcionalidad
-
-* Guardar los avances en el entorno local:
-  git add .
-  git commit -m "Mensaje corto describiendo el cambio realizado"
-
-* Subir la rama de trabajo hacia el repositorio remoto de GitHub:
-  git push origin feature/nombre-funcionalidad
