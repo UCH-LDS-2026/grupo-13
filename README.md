@@ -82,6 +82,7 @@ El sistema persiste la informacion de manera relacional mediante las siguientes 
 6. Se genera un comprobante digital en pantalla asociando un identificador unico de transaccion.
 
 ---
+
 ## Guia de Instalacion desde Cero (Paso a Paso)
 
 Este instructivo está pensado para preparar el entorno de desarrollo si no tenés ninguna herramienta instalada en tu computadora.
@@ -103,42 +104,8 @@ Primero tenés que bajarte e instalar estas cuatro herramientas en tu sistema (d
 ### Paso 2: Clonar y ubicar el proyecto en tu PC
 Para que las páginas web de PHP funcionen, el proyecto **SÍ O SÍ** tiene que estar guardado adentro de una carpeta especial que administra XAMPP llamada `htdocs`. No sirve si lo dejás en el Escritorio o en Descargas.
 
-1. Abrí la carpeta general de tu computadora y navegá hasta esta ruta física:
-   `C:\xampp\htdocs\`
+1. Abrí la carpeta general de tu computadora y navegá hasta esta ruta física: `C:\xampp\htdocs\`
 2. Hacé clic derecho en un espacio blanco de esa carpeta y elegí **"Git Bash Here"** (se abrirá una consola de comandos negra).
 3. Copiá, pegá el siguiente comando y presioná Enter para traerte los archivos del repositorio:
-   ```bash
+```bash
    git clone URL_DEL_REPOSITORIO gestion-tickets-app
-
----
-
-## Estrategia de Ramas (Gitflow Simplificado)
-
-Para mantener la prolijidad en el trabajo grupal y evitar colisiones de codigo, el repositorio se maneja bajo el siguiente esquema de ramas:
-
-### Ramas principales
-* main: Contiene la version oficial, estable de produccion. Solo se integra codigo testeado y funcionando. Nunca se suben cambios de forma directa a esta rama.
-* develop: Rama de integracion. Aqui convergen las tareas de todos los miembros para realizar pruebas integrales antes de pasar a la rama principal.
-
-### Ramas de funcionalidades (Features)
-Cada tarea o issue asignado se desarrolla en una rama independiente creada a partir de develop, usando la nomenclatura establecida:
-
-Formato de nombre:
-feature/nombre-funcionalidad
-
-Ejemplo practico: feature/generador-comprobantes
-
-### Comandos basicos de trabajo:
-
-* Clonar el repositorio por primera vez:
-  git clone URL_DEL_REPOSITORIO
-
-* Crear y cambiarse a una nueva rama de desarrollo:
-  git checkout -b feature/nombre-funcionalidad
-
-* Guardar los avances en el entorno local:
-  git add .
-  git commit -m "Mensaje corto describiendo el cambio realizado"
-
-* Subir la rama de trabajo hacia el repositorio remoto de GitHub:
-  git push origin feature/nombre-funcionalidad

@@ -1,0 +1,18 @@
+REPORTE DE COBERTURA DE PRUEBAS UNITARIAS - EVENTTICK (TP4)
+
+
+Componente Evaluado:
+Archivo: pruebas/TestSencillo.java (Modulo de Logica de Tickets)
+Metodo: crearCodigoUnico()
+
+Cumplimiento de Entregables TP4:
+
+01. Tests Unitarios: 3 tests reales que cubren la logica de negocio 
+    (no vacio, formato de prefijo e identificadores unicos).
+02. Ejecucion CLI: Verificado mediante comandos nativos de Java Engine.
+03. Cobertura: 100% de exito sobre las funciones criticas de control.
+
+Resultados de las Aserciones:
+- [PASADO] El token criptografico no genera strings vacios.
+- [PASADO] El prefijo estructural "TKT-" se incluye correctamente.
+- [PASADO] El algoritmo garantiza que no se repitan identificadores.
